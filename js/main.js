@@ -53,11 +53,13 @@ const getStartGame = () => {
         secondPlayerName = document.getElementById('second-player').value;
 
         turnPlayerName=firstPlayerName;
-
+        document.getElementById("board").style.display='flex'
         document.getElementById('turn').innerText=turnPlayerName;
         currentPlayer = firstPLayerSelectOption;
     }
 }
+
+const spaces = [];
 
 
 const restart = () => {
@@ -68,6 +70,14 @@ const restart = () => {
     document.getElementById('second-player').value = ""; 
     firstPLayerOption.innerHTML="";
     secondPLayerOption.innerHTML="";
+
+    spaces.splice(0, spaces.length)
+    boxes.forEach((box, i) => {
+        document.getElementById(`box${i+1}`).innerText="";
+    })
+    text.innerText = 'PLay';
+    strategy.innerText='';
+    document.querySelector(".turn").style.display='block'
 }
 
 
@@ -99,7 +109,7 @@ const drawBoard = () => {
 
 // Define a few more variables //
 
-const spaces = [];
+
 // const tick_circle = "O";
 // const tick_x = "X";
 
