@@ -70,6 +70,8 @@ const restart = () => {
     document.getElementById('second-player').value = ""; 
     firstPLayerOption.innerHTML="";
     secondPLayerOption.innerHTML="";
+    firstPLayerSelectOption = "";
+    secondPLayerSelectOptio = "";
 
     spaces.splice(0, spaces.length)
     boxes.forEach((box, i) => {
