@@ -41,21 +41,21 @@ const selectOption = (option) => {
 let firstPlayerName="", secondPlayerName="";
 let currentPlayer;
 
+
 const getStartGame = () => {
-    if(firstPlayerName===""&&secondPlayerName===""&&secondPLayerSelectOption===""&&firstPLayerSelectOption===""){
-        document.getElementById("error-info").style.display='block';
-    }
-    else{
+    firstPlayerName = document.getElementById('first-player').value;
+    secondPlayerName = document.getElementById('second-player').value;
+    if(firstPlayerName!==""&&secondPlayerName!==""&&secondPLayerSelectOption!==""&&firstPLayerSelectOption!==""){
         document.querySelector(".container").style.display='flex';
         document.querySelector(".getting-started").style.display='none';
-
-        firstPlayerName = document.getElementById('first-player').value;
-        secondPlayerName = document.getElementById('second-player').value;
 
         turnPlayerName=firstPlayerName;
         document.getElementById("board").style.display='flex'
         document.getElementById('turn').innerText=turnPlayerName;
         currentPlayer = firstPLayerSelectOption;
+    }
+    else{
+        document.getElementById("error-info").style.display='block';
     }
 }
 
