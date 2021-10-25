@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+<body>
+    <div class="getting-started">
+        <h1 class="tic-tac-toe-text">Tic-Tac-Toe</h1>
+        <img src="/images/tic-tac.png" class="tic-tac" alt="">
+        <div class="first-player">
+            <div class="player">
+                <label for="first-player">First Player:</label>
+                <input type="text" id='first-player' placeholder="name" required>
+            </div>
+            <div class="option">
+                Your option: <span id='firstplayer-option'></span>
+            </div>
+            <div class="select-option" id='select-option'>
+                select which you want to be?
+                <div class="option-buttons">
+                    <div class="player-x" onclick="selectOption('X')">Player(X)</div>
+                    <div class="player-o" onclick="selectOption('O')">Player(O)</div>
+                </div>
+            </div>
+        </div>
+        <div class="second-player">
+            <div class="player">
+                <label for="second-player">Second Player:</label>
+                <input type="text" id='second-player' placeholder="name" required>
+            </div>
+            <div class="option">
+                Your option: <span id='secondplayer-option'></span>
+            </div>
+        </div>
+        <div id="error-info" style="display: none;">Oops, Input both of player's name and select any option!</div>
+        <div class="get-start-btn" onclick="getStartGame()">
+            Start to Play
+        </div>
+    </div>
+    <div class="container" style="display: none;">
+        <h1 id="heading">Play</h1>
+        <h2 id="strategy"></h2>
+        <div class="restart-playAgain-buttons">
+            <button id="restart" onclick="restart()">Restart</button>
+            <button id="playAgain" onclick="playAgain()">Play again</button>
+        </div>
+        <p class="turn"><span id='turn'></span> Turn</p>
+        <div id="board">
+            <div class="box" id='box1' id="0" onclick="boxClicked(0)"></div>
+            <div class="box" id='box2' id="1" onclick="boxClicked(1)"></div>
+            <div class="box" id='box3' id="2" onclick="boxClicked(2)"></div>
+            <div class="box" id='box4' id="3" onclick="boxClicked(3)"></div>
+            <div class="box" id='box5' id="4" onclick="boxClicked(4)"></div>
+            <div class="box" id='box6' id="5" onclick="boxClicked(5)"></div>
+            <div class="box" id='box7' id="6" onclick="boxClicked(6)"></div>
+            <div class="box" id='box8' id="7" onclick="boxClicked(7)"></div>
+            <div class="box" id='box9' id="8" onclick="boxClicked(8)"></div> 
+        </div>
+    </div>
+
+
+<script src="/js/main.js"></script>
+</body>
+</html>
