@@ -72,6 +72,7 @@ const restart = () => {
     secondPLayerOption.innerHTML="";
     firstPLayerSelectOption = "";
     secondPLayerSelectOptio = "";
+    document.getElementById("error-info").style.display='none';
 
     spaces.splice(0, spaces.length)
     boxes.forEach((box, i) => {
